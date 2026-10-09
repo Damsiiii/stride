@@ -6,7 +6,6 @@ import AboutSection from "@/components/ui/AboutSection"
 import ScheduleSection from "@/components/ui/ScheduleSection"
 import GallerySection from "@/components/ui/GallerySection"
 import ContactSection from "@/components/ui/ContactSection"
-import JoinSection from "@/components/ui/JoinSection"
 import Footer from "@/components/ui/Footer"
 
 function PublicSite() {
@@ -29,7 +28,6 @@ function PublicSite() {
         <AboutSection />
         <ScheduleSection />
         <GallerySection />
-        <JoinSection />
         <ContactSection />
       </main>
 

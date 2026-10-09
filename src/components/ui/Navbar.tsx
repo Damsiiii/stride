@@ -32,7 +32,6 @@ export default function Navbar() {
     { label: "About", href: "#about" },
     { label: "Runs", href: "#runs" },
     { label: "Tips & Form", href: "#gallery" },
-    { label: "Join", href: "#join" },
     { label: "Contact", href: "#contact" },
   ]
 

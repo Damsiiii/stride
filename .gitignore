@@ -36,3 +36,6 @@ server/.env
 .env.development
 .env.production
 .env.local
+
+# Agent rules & local learning
+.agents/rules/image-sourcing.md

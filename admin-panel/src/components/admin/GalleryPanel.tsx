@@ -110,8 +110,8 @@ export default function GalleryPanel() {
       {/* Header & Add Button */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-[#1A1A1A]">Gallery Management</h1>
-          <p className="text-[13px] text-[#1A1A1A]/60 mt-1">Manage public photos displayed in the gallery section.</p>
+          <h1 className="text-2xl font-bold tracking-tight text-[#1A1A1A]">Tips & Gallery Management</h1>
+          <p className="text-[13px] text-[#1A1A1A]/60 mt-1">Manage public running tips, form guides, and photos displayed in the guide section.</p>
         </div>
         <button
           onClick={() => setShowForm(!showForm)}

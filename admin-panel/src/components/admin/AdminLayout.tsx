@@ -37,7 +37,7 @@ export default function AdminLayout({ activeTab, onTabChange, children }: AdminL
             </a>
             <div className="h-5 w-px bg-white/15" />
             <span className="font-[family-name:var(--font-serif)] text-[18px] text-white tracking-wide">
-              Stride
+              thestrideclub
             </span>
             <span className="text-[13px] text-white/40 font-medium tracking-wider uppercase">
               Admin Portal

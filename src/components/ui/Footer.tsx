@@ -1,4 +1,4 @@
-"use client"
+import Logo from "./Logo"
 
 export default function Footer() {
   return (
@@ -6,11 +6,9 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl px-6 md:px-12 py-14 md:py-16">
         {/* Main Footer Row */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-          {/* Left: Brand */}
+          {/* Left: Brand Logo */}
           <div>
-            <span className="text-[16px] font-semibold tracking-[0.08em] text-[#1A1A1A] uppercase">
-              Stride
-            </span>
+            <Logo iconSize={24} textClassName="text-[15px]" />
           </div>
 
           {/* Right: Social Links */}
@@ -44,7 +42,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-10 pt-6 border-t border-[#1A1A1A]/8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] tracking-[0.08em] text-[#1A1A1A]/30">
-          <p>© {new Date().getFullYear()} Stride Run Club</p>
+          <p>© {new Date().getFullYear()} thestrideclub</p>
           <p>Est. 2023 · Kurunegala, Sri Lanka</p>
         </div>
       </div>

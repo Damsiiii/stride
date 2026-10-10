@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Menu, X, ArrowUpRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import Logo from "./Logo"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -52,17 +53,12 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 md:px-12 lg:px-16">
-        {/* Left: Clean Text Logo */}
+        {/* Left: Brand Logo */}
         <a
           href="#"
-          className="group flex items-center font-[family-name:var(--font-slimamif)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A3C19C] rounded-sm transition-opacity hover:opacity-70"
+          className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A3C19C] rounded-sm transition-opacity hover:opacity-80"
         >
-          <span className="text-[17px] md:text-[20px] font-bold tracking-[0.06em] uppercase text-[#1A1A1A]">
-            thestride
-          </span>
-          <span className="text-[17px] md:text-[20px] font-light tracking-[0.06em] uppercase text-[#1A1A1A]/60">
-            club
-          </span>
+          <Logo showIcon={false} textClassName="text-[28px] md:text-[34px] tracking-[0.05em] font-bold" />
         </a>
 
         {/* Center / Desktop Navigation Links */}

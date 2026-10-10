@@ -28,7 +28,7 @@ app.use(
       if (allowedOrigins.includes(origin) || process.env.CLIENT_URL === "*") {
         callback(null, true);
       } else {
-        callback(null, true); // Alternatively allow all origins if not explicitly restricted
+        callback(new Error("Not allowed by CORS"));
       }
     },
     methods: ["GET", "POST", "PUT", "DELETE"],
@@ -46,25 +46,22 @@ app.get("/api/health", (_req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
-// ── MongoDB Connection & Server Start ──────────────────────
+// ── Server Start & Optional MongoDB Connection ─────────────
+app.listen(PORT, () => {
+  console.log(`🚀  thestrideclub API running on http://localhost:${PORT}`);
+});
+
 const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URI) {
-  console.error(
-    "❌  MONGODB_URI is not set. Copy server/.env.example to server/.env and add your connection string."
-  );
-  process.exit(1);
-}
-
-mongoose
-  .connect(MONGODB_URI)
-  .then(() => {
-    console.log("✅  Connected to MongoDB Atlas");
-    app.listen(PORT, () => {
-      console.log(`🚀  Stride API running on http://localhost:${PORT}`);
+if (MONGODB_URI) {
+  mongoose
+    .connect(MONGODB_URI)
+    .then(() => {
+      console.log("✅  Connected to MongoDB Database");
+    })
+    .catch((err) => {
+      console.warn("⚠️  MongoDB connection warning:", err.message);
     });
-  })
-  .catch((err) => {
-    console.error("❌  MongoDB connection failed:", err.message);
-    process.exit(1);
-  });
+} else {
+  console.log("ℹ️  Running in standalone mode (No MONGODB_URI configured)");
+}

@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* Left: Clean Text Logo */}
         <a
           href="#"
-          className="group flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A3C19C] rounded-sm transition-opacity hover:opacity-70"
+          className="group flex items-center font-[family-name:var(--font-apple)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A3C19C] rounded-sm transition-opacity hover:opacity-70"
         >
           <span className="text-[15px] md:text-[17px] font-semibold tracking-[0.08em] uppercase text-[#1A1A1A]">
             thestride

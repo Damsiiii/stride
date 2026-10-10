@@ -67,7 +67,7 @@ export default function Logo({
       {/* Brand Wordmark in original font */}
       {showText && (
         <span
-          className={`text-[15px] md:text-[17px] tracking-[0.08em] uppercase ${
+          className={`text-[15px] md:text-[17px] font-[family-name:var(--font-apple)] tracking-[0.08em] uppercase ${
             isDark ? "text-white" : "text-[#1A1A1A]"
           } ${textClassName}`}
         >

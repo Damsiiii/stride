@@ -67,11 +67,12 @@ export default function Logo({
       {/* Brand Wordmark in original font */}
       {showText && (
         <span
-          className={`text-[15px] md:text-[17px] font-semibold tracking-[0.08em] uppercase ${
+          className={`text-[15px] md:text-[17px] tracking-[0.08em] uppercase ${
             isDark ? "text-white" : "text-[#1A1A1A]"
           } ${textClassName}`}
         >
-          thestrideclub
+          <span className="font-semibold">thestride</span>
+          <span className={`font-light ${isDark ? "text-white/60" : "text-[#1A1A1A]/60"}`}>club</span>
         </span>
       )}
     </div>

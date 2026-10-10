@@ -55,10 +55,13 @@ export default function Navbar() {
         {/* Left: Clean Text Logo */}
         <a
           href="#"
-          className="group flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A3C19C] rounded-sm transition-opacity hover:opacity-70"
+          className="group flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A3C19C] rounded-sm transition-opacity hover:opacity-70"
         >
           <span className="text-[15px] md:text-[17px] font-semibold tracking-[0.08em] uppercase text-[#1A1A1A]">
-            thestrideclub
+            thestride
+          </span>
+          <span className="text-[15px] md:text-[17px] font-light tracking-[0.08em] uppercase text-[#1A1A1A]/60">
+            club
           </span>
         </a>
 
